@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: metabase
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: MB_DB_FILE
+        value: /metabase-data/metabase.db
+    dockerfilePath: ./Dockerfile
