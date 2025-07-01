@@ -2,9 +2,11 @@ services:
   - type: web
     name: metabase
     env: docker
-    plan: free
+    plan: starter-plus
     autoDeploy: true
-    envVars:
-      - key: MB_DB_FILE
-        value: /metabase-data/metabase.db
     dockerfilePath: ./Dockerfile
+    envVars:
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx1024m
+    ports:
+      - port: 3000
