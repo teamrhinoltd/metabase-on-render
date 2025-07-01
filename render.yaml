@@ -10,3 +10,4 @@ services:
         value: -Xmx1024m
     ports:
       - port: 3000
+    healthCheckPath: /
